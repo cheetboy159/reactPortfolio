@@ -8,6 +8,11 @@
   
   color:white;
 }
-.bio{
+.bioImg{
+  margin-top: 80px;
+  border-radius: 15px;
+  width: 100%;
+}
+.bioBackgroundImg{
   background-image: url("https://w.wallhaven.cc/full/3k/wallhaven-3k7qjv.jpg");
 }

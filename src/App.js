@@ -94,14 +94,19 @@ function App() {
       </header>
 
       <div className="bio">
-        <div className="row bioBackground">
+        <div className="row bioBackgroundImg">
           <div className="col-md-8">
             <h3>Bio:</h3>
-            <p>A new full stack developer on the market looking for a new path. </p>
+            <p> I am a new web develpor that is eager to learn all there is and grow.
+            I started my carrier path as a biomedical engineer sense 2015 and realized
+            that I had a passion for computer science. After a year of trying to learn on
+            my own; and failing miserably. I realized I needed to jump right into a programed
+            tailored to teach me the ways. I am proud of what I have achieved during these
+            few months and look forward to applying my new skill into problem solving. </p>
           </div>
           <div className="col-md-4">
             <h3>just a place holder</h3>
-            <p>other stuff to see the structure of the page</p>
+            <img className="bioImg" src="https://cheetboy159.github.io/portfolio/assets/mena1.jpg" alt="myImg"/>
           </div>
         </div>
 
