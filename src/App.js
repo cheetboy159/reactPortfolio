@@ -106,7 +106,7 @@ function App() {
           </div>
           <div className="col-md-4">
             <h3>just a place holder</h3>
-            <img className="bioImg" src="https://cheetboy159.github.io/portfolio/assets/mena1.jpg" alt="myImg"/>
+            <img className="bioImg" src="https://github.com/cheetboy159/reactPortfolio/blob/main/src/assets/croped_selfPic.jpg?raw=true" alt="myImg"/>
           </div>
         </div>
 
