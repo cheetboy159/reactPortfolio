@@ -3,10 +3,21 @@
   
 }
 
-.header{
-  background-image: url("https://w.wallhaven.cc/full/9m/wallhaven-9m5owx.jpg");
-  
-  color:white;
+.jumbotron{
+  background-color: #2E4959;
+  color: #fff;
+}
+.sideBar{
+   background-color: #5A7E8C;
+  color: #fff;
+}
+.bioBackground{
+  background-color: #8AB0BF;
+  color: #fff;
+}
+.portfolioBackground{
+  background-color: #BF6B63;
+
 }
 .bioImg{
   margin-top: 80px;

@@ -1,4 +1,11 @@
-
+import Header from "./components/header"
+import Bio from "./components/bio"
+import Portfolio from "./components/portfolio"
+import Skillset from "./components/skillset"
+import Tab from 'react-bootstrap/Tab'
+import Nav from 'react-bootstrap/Nav'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import "./App.css";
 
 function App() {
@@ -55,92 +62,48 @@ function App() {
   return (
     // app
     <div className="App">
-      {/* header area */}
-      <header className="jumbotron header">
-        {/*  */}
-        <h1><strong>Mena Wahba</strong></h1>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#NabBar">Mena Wahba</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+      <Header />
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#home">Home <span className="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#resume">Resume</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Social
-        </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Action</a>
-                  <a className="dropdown-item" href="#">Another action</a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+      <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <Row>
+          <Col className="sideBar  pr-0 mr-0" style={{ position: "relative", top: '-2em' }} sm={12} md={2}>
+            <Nav className="flex-column">
+              <Nav.Item>
+                <Nav.Link className="text-white" eventKey="first">Bio</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link className="text-white" eventKey="second">Portfolio</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link className="text-white" eventKey="third">Skill Set</Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Col>
+          <Col className="ml-0 pl-0" style={{ position: "relative", top: '-2em' }} sm={12}md={10}>
+            <Tab.Content>
+              <Tab.Pane className="bioBackground" eventKey="first">
+                <Bio />
+              </Tab.Pane>
+              <Tab.Pane className="portfolioBackground" eventKey="second">
+                <Portfolio projects={mySites} />
+              </Tab.Pane>
+              <Tab.Pane className="portfolioBackground" eventKey="third">
+                <Skillset  />
+              </Tab.Pane>
+            </Tab.Content>
+          </Col>
+        </Row>
+      </Tab.Container>
+     
 
-          </div>
-        </nav>
-      </header>
 
-      <div className="bio">
-        <div className="row bioBackgroundImg">
-          <div className="col-md-8">
-            <h3>Bio:</h3>
-            <p> I am a new web develpor that is eager to learn all there is and grow.
-            I started my carrier path as a biomedical engineer sense 2015 and realized
-            that I had a passion for computer science. After a year of trying to learn on
-            my own; and failing miserably. I realized I needed to jump right into a programed
-            tailored to teach me the ways. I am proud of what I have achieved during these
-            few months and look forward to applying my new skill into problem solving. </p>
-          </div>
-          <div className="col-md-4">
-            <h3>just a place holder</h3>
-            <img className="bioImg" src="https://github.com/cheetboy159/reactPortfolio/blob/main/src/assets/croped_selfPic.jpg?raw=true" alt="myImg"/>
-          </div>
-        </div>
 
-      </div>
+      
+      {/* <Bio />
+      <Portfolio projects={mySites}/> */}
 
-      <div className="container">
-        <div className="row">
-          {mySites.map((site) => (
-            <div className="col-sm-12 col-md-4">
-              <div className="card">
-                <img
-                  src={site.img}
-                  className="card-img-top"
-                  alt={site.title}
-                  width={site.width}
-                  height={site.height}
-                />
-                <div className="card-body">
-                  <h4 className="card-title">{site.title}</h4>
-                  <h6>Libraries used:</h6>
-                  <ul className="list-unstyled">
-                    {site.libraries.map((lib) => (
-                      <li className="card-text">{lib}</li>
-                    ))}
-                  </ul>
-                  <a href={site.gitHubLink} className="btn btn-primary">
-                    Github Repo
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+
+      
     </div>
   );
 }
