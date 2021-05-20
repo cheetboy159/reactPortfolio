@@ -8,7 +8,7 @@ export default function Bio() {
         <Container className="px-3 mx-3 pt-4">
             <Row>
                 <Col sm={12} md={8}>
-                    <p>
+                    <p className="bioTxt">
                         I am a new web develpor that is eager to learn all there is and grow.
                         I started my carrier path as a biomedical engineer sense 2015 and realized
                         that I had a passion for computer science. After a year of trying to learn on

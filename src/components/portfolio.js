@@ -7,35 +7,34 @@ import ListGroupItem from "react-bootstrap/ListGroupItem"
 
 
 
-export default function Portfolio({projects}) {
+export default function Portfolio({ projects }) {
     return (
         <Container className="px-5 mx-5" >
             <Row>
-                {projects.map((site)=>(
+                {projects.map((site) => (
                     <Col sm={12} md={4}>
                         <Card className="my-3">
-                            <Card.Img 
-                            variant="top" 
+                            <Card.Img
+                                variant="top"
                                 src={site.img}
                                 alt={site.title}
                                 width={site.width}
-                               height={site.height} 
-                             />
+                                height={site.height}
+                            />
                             <Card.Body>
                                 <Card.Title>{site.title}</Card.Title>
-                                {/* <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                            </Card.Text> */}
+                                <Card.Text>
+                                    {site.discription}
+                                </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
                                 {site.libraries.map((lib) => (
-                                        <ListGroupItem>{lib}</ListGroupItem>
-                                    ))}
+                                    <ListGroupItem>{lib}</ListGroupItem>
+                                ))}
                             </ListGroup>
                             <Card.Body>
                                 <Card.Link href={site.gitHubLink}>Github Repo</Card.Link>
-                                {/* <Card.Link href="#">Another Link</Card.Link> */}
+                                <Card.Link href={site.appLink}>App Link</Card.Link>
                             </Card.Body>
                         </Card>
                     </Col>

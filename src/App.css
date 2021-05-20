@@ -15,7 +15,13 @@
   background-color: #8AB0BF;
   color: #fff;
 }
-.portfolioBackground{
+.bioTxt{
+  font-size: 25px;
+}
+.thumbnail{
+  padding-bottom: 50px;
+}
+.skillBackground{
   background-color: #BF6B63;
 
 }
