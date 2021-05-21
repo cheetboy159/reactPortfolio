@@ -11,8 +11,8 @@ export default function Portfolio({ projects }) {
     return (
         <Container className="px-5 mx-5" >
             <Row>
-                {projects.map((site) => (
-                    <Col sm={12} md={4}>
+                {projects.map((site,index) => (
+                    <Col key={"card"+index} sm={12} md={4}>
                         <Card className="my-3">
                             <Card.Img
                                 variant="top"
@@ -27,11 +27,7 @@ export default function Portfolio({ projects }) {
                                     {site.discription}
                                 </Card.Text>
                             </Card.Body>
-                            <ListGroup className="list-group-flush">
-                                {site.libraries.map((lib) => (
-                                    <ListGroupItem>{lib}</ListGroupItem>
-                                ))}
-                            </ListGroup>
+                            
                             <Card.Body>
                                 <Card.Link href={site.gitHubLink}>Github Repo</Card.Link>
                                 <Card.Link href={site.appLink}>App Link</Card.Link>

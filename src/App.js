@@ -1,11 +1,20 @@
-import Header from "./components/header"
-import Bio from "./components/bio"
-import Portfolio from "./components/portfolio"
-import Skillset from "./components/skillset"
-import Tab from 'react-bootstrap/Tab'
-import Nav from 'react-bootstrap/Nav'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Header from "./components/header";
+import Bio from "./components/bio";
+import Portfolio from "./components/portfolio";
+import Skillset from "./components/skillset";
+import Tab from 'react-bootstrap/Tab';
+import Nav from 'react-bootstrap/Nav';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import cssImg from './assets/css.png';
+import bootstrap from './assets/bootstrap.png';
+import javascript from './assets/js.png'
+import jquery from './assets/jQuery.png'
+import html from './assets/html.png'
+import node from './assets/node.png'
+import mysql from './assets/mysql.png'
+import react from './assets/react.png'
+import mongodb from './assets/mongodb.png'
 import "./App.css";
 
 function App() {
@@ -74,65 +83,59 @@ function App() {
   const skillList=[
     {
     title: "HTML",
-      img:"https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png",
-    width:60,
-    height:60,
+      img:html,
+      width: 300,
+      height: 300,
     },
     {
       title: "CSS",
-      img: "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png",
-      width: 60,
-      height: 60,
+      img: cssImg,
+      width: 300,
+      height: 300,
     },
     {
       title: "JavaScript",
-      img: "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_js_official_icon_130509.png",
-      width: 60,
-      height: 60,
+      img: javascript,
+      width: 300,
+      height: 300,
     },
     {
       title: "jQuery",
-      img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/jquery_original_wordmark_logo_icon_146447.png",
-      width: 60,
-      height: 60,
+      img: jquery,
+      width: 300,
+      height: 300,
     },
     {
       title: "Node",
-      img: "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_node_icon_130301.png",
-      width: 60,
-      height: 60,
+      img: node,
+      width: 300,
+      height: 300,
     },
     {
       title: "MySQL",
-      img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/mysql_original_wordmark_logo_icon_146417.png",
-      width: 60,
-      height: 60,
+      img: mysql,
+      width: 300,
+      height: 300,
     },
     {
       title: "React",
-      img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_logo_icon_146374.png",
-      width: 60,
-      height: 60,
+      img: react,
+      width: 300,
+      height: 300,
     },
     {
       title: "Bootstrap",
-      img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/bootstrap_plain_wordmark_logo_icon_146620.png",
-      width: 60,
-      height: 60,
+      img: bootstrap,
+      width: 300,
+      height: 300,
     },
     {
       title: "MongoDB",
-      img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
-      width: 60,
-      height: 60,
-    },
-    {
-      title: "jQuery",
-      img: "https://cdn.icon-icons.com/icons2/2415/PNG/512/jquery_original_wordmark_logo_icon_146447.png",
+      img: mongodb,
       width: 300,
-      height: 200,
+      height: 300,
     }
-  ]
+  ];
   return (
     // app
     <div className="App">

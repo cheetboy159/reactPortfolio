@@ -2,7 +2,6 @@
   text-align: center;
   
 }
-
 .jumbotron{
   background-color: #2E4959;
   color: #fff;
@@ -21,15 +20,8 @@
 .thumbnail{
   padding-bottom: 50px;
 }
+
 .skillBackground{
   background-color: #BF6B63;
 
-}
-.bioImg{
-  margin-top: 80px;
-  border-radius: 15px;
-  width: 100%;
-}
-.bioBackgroundImg{
-  background-image: url("https://w.wallhaven.cc/full/3k/wallhaven-3k7qjv.jpg");
 }

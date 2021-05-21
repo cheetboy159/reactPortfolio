@@ -9,10 +9,10 @@ export default function Skillset({ skills}) {
     return (
         <Container className="px-5 mx-5" >
             <Row>
-                {skills.map((skill) => (
-                    <Col sm={12} md={4}>
+                {skills.map((skill,index) => (
+                    <Col key={"skill"+index} sm={12} md={4}>
                         <Card className="my-3">
-                            <Card.Img
+                            <Card.Img 
                                 variant="top"
                                 src={skill.img}
                                 alt={skill.title}
